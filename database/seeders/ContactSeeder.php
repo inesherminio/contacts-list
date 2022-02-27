@@ -18,9 +18,9 @@ class ContactSeeder extends Seeder
     {
         DB::table('contacts')->insert([
             'name' => Str::random(10),
-            'email' => Str::random(10).'@gmail.com',
+            'email' => Str::random(10),
             'contact' => random_int(900000000, 999999999),
-            'country' => Str::random(10)('password'),
+            'country' => Str::random(10),
         ]);
     }
 }

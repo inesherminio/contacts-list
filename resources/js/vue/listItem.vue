@@ -1,5 +1,5 @@
 <template>
-    <div v-bind:style="{ display: 'flex' }" v-if="!show">
+    <div v-bind:style="{ display: 'flex', flexWrap: 'wrap' }" v-if="!show">
         <div v-bind:style="{ margin: '20px', width: '15%' }">{{contact.name}}</div>
         <div v-bind:style="{ margin: '20px', width: '15%' }">{{contact.email}}</div>
         <div v-bind:style="{ margin: '20px', width: '15%' }">{{contact.contact}}</div>

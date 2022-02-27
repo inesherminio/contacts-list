@@ -35,11 +35,6 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $existingContact = Contact::find($email) || Contact::find($contact);
-
-        if ($existingContact) {
-            return "Contact already created";
-        } else {
             $newContact = new Contact;
             $newContact->name = $request->contact["name"];
             $newContact->email = $request->contact['email'];
@@ -48,8 +43,6 @@ class ContactController extends Controller
             $newContact->save();
     
             return $newContact;
-        }
-        
     }
 
     /**
